@@ -28,7 +28,7 @@ public class PythonInterpreterService implements IPythonInterpreterService {
 
         StringBuilder stringBuilder = new StringBuilder(codeDto.getCode());
 
-        String interpreterName = stringBuilder.substring(0, 7);
+        String interpreterName = codeDto.getCode().split(" ")[0];
         String code = stringBuilder.substring(8);
 
         if (interpreterName.equals(InterpretersEnum.PYTHON.getInterpreterName())) {
