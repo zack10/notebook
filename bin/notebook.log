@@ -1,0 +1,92 @@
+01/02/20 17:51:29 INFO  [restartedMain][o.s.b.StartupInfoLogger] [] Starting NotebookApplication on zakarya with PID 16572 (started by zack in C:\Users\Lenovo T470\Documents\GitHub\oracle\notebook)
+01/02/20 17:51:29 INFO  [restartedMain][o.s.b.SpringApplication] [] The following profiles are active: dev
+01/02/20 17:51:32 INFO  [restartedMain][o.a.j.l.DirectJDKLog] [] Initializing ProtocolHandler ["http-nio-8080"]
+01/02/20 17:51:32 INFO  [restartedMain][o.a.j.l.DirectJDKLog] [] Starting service [Tomcat]
+01/02/20 17:51:32 INFO  [restartedMain][o.a.j.l.DirectJDKLog] [] Starting Servlet engine: [Apache Tomcat/9.0.30]
+01/02/20 17:51:32 INFO  [restartedMain][o.a.j.l.DirectJDKLog] [] Initializing Spring embedded WebApplicationContext
+01/02/20 17:51:33 INFO  [restartedMain][o.a.j.l.DirectJDKLog] [] Starting ProtocolHandler ["http-nio-8080"]
+01/02/20 17:51:33 INFO  [restartedMain][o.s.b.StartupInfoLogger] [] Started NotebookApplication in 4.636 seconds (JVM running for 7.274)
+01/02/20 17:52:12 INFO  [http-nio-8080-exec-2][o.a.j.l.DirectJDKLog] [] Initializing Spring DispatcherServlet 'dispatcherServlet'
+01/02/20 17:52:12 INFO  [http-nio-8080-exec-2][c.o.n.c.NoteBookController] [] print('karim')
+01/02/20 17:55:40 INFO  [http-nio-8080-exec-5][c.o.n.c.NoteBookController] [] %python print 1+1
+01/02/20 18:02:55 INFO  [restartedMain][o.s.b.StartupInfoLogger] [] Starting NotebookApplication on zakarya with PID 5036 (started by zack in C:\Users\Lenovo T470\Documents\GitHub\oracle\notebook)
+01/02/20 18:02:55 INFO  [restartedMain][o.s.b.SpringApplication] [] The following profiles are active: dev
+01/02/20 18:02:58 INFO  [restartedMain][o.a.j.l.DirectJDKLog] [] Initializing ProtocolHandler ["http-nio-8080"]
+01/02/20 18:02:58 INFO  [restartedMain][o.a.j.l.DirectJDKLog] [] Starting service [Tomcat]
+01/02/20 18:02:58 INFO  [restartedMain][o.a.j.l.DirectJDKLog] [] Starting Servlet engine: [Apache Tomcat/9.0.30]
+01/02/20 18:02:58 INFO  [restartedMain][o.a.j.l.DirectJDKLog] [] Initializing Spring embedded WebApplicationContext
+01/02/20 18:02:59 INFO  [restartedMain][o.a.j.l.DirectJDKLog] [] Starting ProtocolHandler ["http-nio-8080"]
+01/02/20 18:02:59 INFO  [restartedMain][o.s.b.StartupInfoLogger] [] Started NotebookApplication in 4.503 seconds (JVM running for 7.095)
+01/02/20 18:03:03 INFO  [http-nio-8080-exec-3][o.a.j.l.DirectJDKLog] [] Initializing Spring DispatcherServlet 'dispatcherServlet'
+01/02/20 18:03:04 INFO  [http-nio-8080-exec-3][c.o.n.c.NoteBookController] [] interpreter-name: %python
+01/02/20 22:40:13 INFO  [restartedMain][o.s.b.StartupInfoLogger] [] Starting NotebookApplication on zakarya with PID 772 (started by zack in C:\Users\Lenovo T470\Documents\GitHub\oracle\notebook)
+01/02/20 22:40:13 INFO  [restartedMain][o.s.b.SpringApplication] [] The following profiles are active: dev
+01/02/20 22:40:16 INFO  [restartedMain][o.a.j.l.DirectJDKLog] [] Initializing ProtocolHandler ["http-nio-8080"]
+01/02/20 22:40:16 INFO  [restartedMain][o.a.j.l.DirectJDKLog] [] Starting service [Tomcat]
+01/02/20 22:40:16 INFO  [restartedMain][o.a.j.l.DirectJDKLog] [] Starting Servlet engine: [Apache Tomcat/9.0.30]
+01/02/20 22:40:16 INFO  [restartedMain][o.a.j.l.DirectJDKLog] [] Initializing Spring embedded WebApplicationContext
+01/02/20 22:40:17 INFO  [restartedMain][o.a.j.l.DirectJDKLog] [] Starting ProtocolHandler ["http-nio-8080"]
+01/02/20 22:40:17 INFO  [restartedMain][o.s.b.StartupInfoLogger] [] Started NotebookApplication in 4.644 seconds (JVM running for 7.579)
+01/02/20 22:40:21 INFO  [http-nio-8080-exec-1][o.a.j.l.DirectJDKLog] [] Initializing Spring DispatcherServlet 'dispatcherServlet'
+01/02/20 22:40:21 INFO  [http-nio-8080-exec-1][c.o.n.c.NoteBookController] [] THIS IS PYTHON CODE !
+01/02/20 22:40:52 INFO  [http-nio-8080-exec-3][c.o.n.c.NoteBookController] [] THIS IS PYTHON CODE !
+01/02/20 22:41:08 ERROR [http-nio-8080-exec-4][c.o.n.c.NoteBookController] [] THIS ISN'T PYTHON CODE !
+01/02/20 22:41:19 INFO  [http-nio-8080-exec-5][c.o.n.c.NoteBookController] [] THIS IS PYTHON CODE !
+01/02/20 23:00:30 INFO  [restartedMain][o.s.b.StartupInfoLogger] [] Starting NotebookApplication on zakarya with PID 14408 (started by zack in C:\Users\Lenovo T470\Documents\GitHub\oracle\notebook)
+01/02/20 23:00:30 INFO  [restartedMain][o.s.b.SpringApplication] [] The following profiles are active: dev
+01/02/20 23:00:33 INFO  [restartedMain][o.a.j.l.DirectJDKLog] [] Initializing ProtocolHandler ["http-nio-8080"]
+01/02/20 23:00:33 INFO  [restartedMain][o.a.j.l.DirectJDKLog] [] Starting service [Tomcat]
+01/02/20 23:00:33 INFO  [restartedMain][o.a.j.l.DirectJDKLog] [] Starting Servlet engine: [Apache Tomcat/9.0.30]
+01/02/20 23:00:33 INFO  [restartedMain][o.a.j.l.DirectJDKLog] [] Initializing Spring embedded WebApplicationContext
+01/02/20 23:00:34 INFO  [restartedMain][o.a.j.l.DirectJDKLog] [] Starting ProtocolHandler ["http-nio-8080"]
+01/02/20 23:00:34 INFO  [restartedMain][o.s.b.StartupInfoLogger] [] Started NotebookApplication in 4.753 seconds (JVM running for 7.34)
+01/02/20 23:00:54 INFO  [http-nio-8080-exec-1][o.a.j.l.DirectJDKLog] [] Initializing Spring DispatcherServlet 'dispatcherServlet'
+01/02/20 23:00:56 INFO  [http-nio-8080-exec-1][c.o.n.s.i.PythonInterpreterService] [] %pythonprint1+1
+01/02/20 23:00:56 INFO  [http-nio-8080-exec-1][c.o.n.s.i.PythonInterpreterService] [] THIS IS PYTHON CODE !
+01/02/20 23:00:56 INFO  [http-nio-8080-exec-1][c.o.n.s.i.PythonInterpreterService] [] %pythonprint1+1
+01/02/20 23:00:56 INFO  [http-nio-8080-exec-1][c.o.n.s.i.PythonInterpreterService] [] THIS IS PYTHON CODE !
+01/02/20 23:04:51 INFO  [restartedMain][o.s.b.StartupInfoLogger] [] Starting NotebookApplication on zakarya with PID 16404 (started by zack in C:\Users\Lenovo T470\Documents\GitHub\oracle\notebook)
+01/02/20 23:04:51 INFO  [restartedMain][o.s.b.SpringApplication] [] The following profiles are active: dev
+01/02/20 23:04:54 INFO  [restartedMain][o.a.j.l.DirectJDKLog] [] Initializing ProtocolHandler ["http-nio-8080"]
+01/02/20 23:04:54 INFO  [restartedMain][o.a.j.l.DirectJDKLog] [] Starting service [Tomcat]
+01/02/20 23:04:54 INFO  [restartedMain][o.a.j.l.DirectJDKLog] [] Starting Servlet engine: [Apache Tomcat/9.0.30]
+01/02/20 23:04:54 INFO  [restartedMain][o.a.j.l.DirectJDKLog] [] Initializing Spring embedded WebApplicationContext
+01/02/20 23:04:55 INFO  [restartedMain][o.a.j.l.DirectJDKLog] [] Starting ProtocolHandler ["http-nio-8080"]
+01/02/20 23:04:55 INFO  [restartedMain][o.s.b.StartupInfoLogger] [] Started NotebookApplication in 4.739 seconds (JVM running for 7.395)
+01/02/20 23:05:02 INFO  [http-nio-8080-exec-2][o.a.j.l.DirectJDKLog] [] Initializing Spring DispatcherServlet 'dispatcherServlet'
+01/02/20 23:05:03 INFO  [http-nio-8080-exec-2][c.o.n.s.i.PythonInterpreterService] [] THIS IS PYTHON CODE !
+01/02/20 23:05:03 INFO  [http-nio-8080-exec-2][c.o.n.s.i.PythonInterpreterService] [] THIS IS PYTHON CODE !
+01/02/20 23:05:23 ERROR [http-nio-8080-exec-3][c.o.n.s.i.PythonInterpreterService] [] THIS ISN'T PYTHON CODE !
+01/02/20 23:05:23 ERROR [http-nio-8080-exec-3][c.o.n.s.i.PythonInterpreterService] [] THIS ISN'T PYTHON CODE !
+01/02/20 23:05:32 ERROR [http-nio-8080-exec-4][c.o.n.s.i.PythonInterpreterService] [] THIS ISN'T PYTHON CODE !
+01/02/20 23:05:32 ERROR [http-nio-8080-exec-4][c.o.n.s.i.PythonInterpreterService] [] THIS ISN'T PYTHON CODE !
+01/02/20 23:06:08 ERROR [http-nio-8080-exec-5][c.o.n.s.i.PythonInterpreterService] [] THIS ISN'T PYTHON CODE !
+01/02/20 23:06:08 ERROR [http-nio-8080-exec-5][c.o.n.s.i.PythonInterpreterService] [] THIS ISN'T PYTHON CODE !
+01/02/20 23:06:23 ERROR [http-nio-8080-exec-6][c.o.n.s.i.PythonInterpreterService] [] THIS ISN'T PYTHON CODE !
+01/02/20 23:06:23 ERROR [http-nio-8080-exec-6][c.o.n.s.i.PythonInterpreterService] [] THIS ISN'T PYTHON CODE !
+01/02/20 23:07:09 INFO  [http-nio-8080-exec-7][c.o.n.s.i.PythonInterpreterService] [] THIS IS PYTHON CODE !
+01/02/20 23:07:09 INFO  [http-nio-8080-exec-7][c.o.n.s.i.PythonInterpreterService] [] THIS IS PYTHON CODE !
+01/02/20 23:20:16 INFO  [restartedMain][o.s.b.StartupInfoLogger] [] Starting NotebookApplication on zakarya with PID 10264 (started by zack in C:\Users\Lenovo T470\Documents\GitHub\oracle\notebook)
+01/02/20 23:20:16 INFO  [restartedMain][o.s.b.SpringApplication] [] The following profiles are active: dev
+01/02/20 23:20:19 INFO  [restartedMain][o.a.j.l.DirectJDKLog] [] Initializing ProtocolHandler ["http-nio-8080"]
+01/02/20 23:20:19 INFO  [restartedMain][o.a.j.l.DirectJDKLog] [] Starting service [Tomcat]
+01/02/20 23:20:19 INFO  [restartedMain][o.a.j.l.DirectJDKLog] [] Starting Servlet engine: [Apache Tomcat/9.0.30]
+01/02/20 23:20:19 INFO  [restartedMain][o.a.j.l.DirectJDKLog] [] Initializing Spring embedded WebApplicationContext
+01/02/20 23:20:20 INFO  [restartedMain][o.a.j.l.DirectJDKLog] [] Starting ProtocolHandler ["http-nio-8080"]
+01/02/20 23:20:20 INFO  [restartedMain][o.s.b.StartupInfoLogger] [] Started NotebookApplication in 4.799 seconds (JVM running for 7.577)
+01/02/20 23:20:25 INFO  [http-nio-8080-exec-1][o.a.j.l.DirectJDKLog] [] Initializing Spring DispatcherServlet 'dispatcherServlet'
+01/02/20 23:20:26 INFO  [http-nio-8080-exec-1][c.o.n.s.i.PythonInterpreterService] [] THIS IS PYTHON CODE !
+01/02/20 23:20:27 INFO  [http-nio-8080-exec-1][c.o.n.s.i.PythonInterpreterService] [] THIS IS PYTHON CODE !
+01/02/20 23:58:27 INFO  [restartedMain][o.s.b.StartupInfoLogger] [] Starting NotebookApplication on zakarya with PID 11212 (started by zack in C:\Users\Lenovo T470\Documents\GitHub\oracle\notebook)
+01/02/20 23:58:27 INFO  [restartedMain][o.s.b.SpringApplication] [] The following profiles are active: dev
+01/02/20 23:58:29 INFO  [restartedMain][o.a.j.l.DirectJDKLog] [] Initializing ProtocolHandler ["http-nio-8080"]
+01/02/20 23:58:29 INFO  [restartedMain][o.a.j.l.DirectJDKLog] [] Starting service [Tomcat]
+01/02/20 23:58:29 INFO  [restartedMain][o.a.j.l.DirectJDKLog] [] Starting Servlet engine: [Apache Tomcat/9.0.30]
+01/02/20 23:58:29 INFO  [restartedMain][o.a.j.l.DirectJDKLog] [] Initializing Spring embedded WebApplicationContext
+01/02/20 23:58:30 INFO  [restartedMain][o.a.j.l.DirectJDKLog] [] Starting ProtocolHandler ["http-nio-8080"]
+01/02/20 23:58:30 INFO  [restartedMain][o.s.b.StartupInfoLogger] [] Started NotebookApplication in 4.221 seconds (JVM running for 6.746)
+01/02/20 23:58:36 INFO  [http-nio-8080-exec-2][o.a.j.l.DirectJDKLog] [] Initializing Spring DispatcherServlet 'dispatcherServlet'
+01/02/20 23:58:38 INFO  [http-nio-8080-exec-2][c.o.n.s.i.PythonInterpreterService] [] THIS IS PYTHON CODE !
+01/02/20 23:58:38 INFO  [http-nio-8080-exec-2][c.o.n.s.i.PythonInterpreterService] [] org.python.util.PythonInterpreter@4b9696b5
+01/02/20 23:58:38 INFO  [http-nio-8080-exec-2][c.o.n.s.i.PythonInterpreterService] [] THIS IS PYTHON CODE !
+01/02/20 23:58:38 INFO  [http-nio-8080-exec-2][c.o.n.s.i.PythonInterpreterService] [] org.python.util.PythonInterpreter@218ea315
