@@ -4,6 +4,7 @@ import com.oracle.notebook.controller.dto.CodeDto;
 import com.oracle.notebook.controller.dto.ResultDto;
 import com.oracle.notebook.enums.InterpretersEnum;
 import com.oracle.notebook.service.IPythonInterpreterService;
+import org.python.core.PyInteger;
 import org.python.util.PythonInterpreter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,13 +18,11 @@ public class PythonInterpreterService implements IPythonInterpreterService {
 
     private static Logger logger = LoggerFactory.getLogger(PythonInterpreterService.class);
 
+    static PythonInterpreter interpreter = new PythonInterpreter();
+
     @Override
     public ResultDto interpretPythonCode(CodeDto codeDto) throws RuntimeException {
 
-        PythonInterpreter interpreter = new PythonInterpreter();
-        StringWriter out = new StringWriter();
-        interpreter.setOut(out);
-        interpreter.setErr(out);
         ResultDto resultDto = new ResultDto();
 
         StringBuilder stringBuilder = new StringBuilder(codeDto.getCode());
@@ -33,8 +32,20 @@ public class PythonInterpreterService implements IPythonInterpreterService {
 
         if (interpreterName.equals(InterpretersEnum.PYTHON.getInterpreterName())) {
             logger.info("THIS IS PYTHON CODE !");
-            interpreter.exec(code);
-            resultDto.setResult(out.toString());
+
+            StringWriter out = new StringWriter();
+
+            interpreter.setOut(out);
+            interpreter.setErr(out);
+
+            if (code.contains("print")) {
+                interpreter.exec(code);
+                resultDto.setResult(out.toString());
+            }else {
+                String[] codeInstr = code.split("=");
+                interpreter.set(codeInstr[0], new PyInteger(Integer.parseInt(codeInstr[1])));
+            }
+
         }else {
             logger.error("THIS ISN'T PYTHON CODE !");
         }
