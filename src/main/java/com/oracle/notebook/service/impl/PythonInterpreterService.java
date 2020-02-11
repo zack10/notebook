@@ -1,6 +1,7 @@
 package com.oracle.notebook.service.impl;
 
 import com.oracle.notebook.controller.dto.CodeDto;
+import com.oracle.notebook.controller.dto.PyInterpreter;
 import com.oracle.notebook.controller.dto.ResultDto;
 import com.oracle.notebook.enums.ConstantsEnum;
 import com.oracle.notebook.enums.InterpretersEnum;
@@ -10,7 +11,6 @@ import com.oracle.notebook.exceptions.UnknownInterpreterException;
 import com.oracle.notebook.service.IPythonInterpreterService;
 import org.python.core.PyException;
 import org.python.core.PyInteger;
-import org.python.util.PythonInterpreter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -31,9 +31,9 @@ public class PythonInterpreterService implements IPythonInterpreterService {
         String interpreterName = codeDto.getCode().split(" ")[0];
         String code = stringBuilder.substring(8);
 
-        PythonInterpreter interpreter = (PythonInterpreter) request.getSession().getAttribute(ConstantsEnum.SESSIONID.name());
+        PyInterpreter interpreter = (PyInterpreter) request.getSession().getAttribute(ConstantsEnum.SESSIONID.name());
         if (interpreter == null) {
-            interpreter = new PythonInterpreter();
+            interpreter = new PyInterpreter();
             /*
             * if interpreter object is not present in session,
             * set interpreter in the request
