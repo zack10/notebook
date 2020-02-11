@@ -13,6 +13,7 @@ public class ResultDto implements Serializable {
     }
 
     public ResultDto(String result) {
+        super();
         this.result = result;
     }
 

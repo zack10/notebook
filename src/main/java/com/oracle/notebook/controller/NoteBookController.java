@@ -2,7 +2,6 @@ package com.oracle.notebook.controller;
 
 import com.oracle.notebook.controller.dto.CodeDto;
 import com.oracle.notebook.controller.dto.ResultDto;
-import com.oracle.notebook.enums.InterpretersEnum;
 import com.oracle.notebook.service.IPythonInterpreterService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,6 +10,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
+
+//@CrossOrigin(origins = "http://localhost:4200", allowCredentials = "true")
 @RestController
 @RequestMapping("/notebook")
 public class NoteBookController {
@@ -23,9 +26,14 @@ public class NoteBookController {
         this.pythonInterpreterService = pythonInterpreterService;
     }
 
+    /**
+     * POST web service to execute python code
+     * @param codeDto
+     * @param request
+     * @return
+     */
     @PostMapping(value = "/execute", headers = "Accept=application/json")
-    public ResponseEntity<ResultDto> execute(@RequestBody CodeDto codeDto) {
-        return new ResponseEntity<>(pythonInterpreterService.interpretPythonCode(codeDto), HttpStatus.OK);
+    public ResponseEntity<ResultDto> execute(@Valid @RequestBody CodeDto codeDto, HttpServletRequest request) {
+        return new ResponseEntity<>(pythonInterpreterService.interpretPythonCode(codeDto, request), HttpStatus.OK);
     }
-
 }

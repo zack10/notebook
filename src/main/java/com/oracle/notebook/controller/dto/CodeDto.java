@@ -1,11 +1,13 @@
 package com.oracle.notebook.controller.dto;
 
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 public class CodeDto implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @NotNull
     private String code;
 
     public CodeDto() {
