@@ -34,6 +34,7 @@ public class NoteBookController {
      */
     @PostMapping(value = "/execute", headers = "Accept=application/json")
     public ResponseEntity<ResultDto> execute(@Valid @RequestBody CodeDto codeDto, HttpServletRequest request) {
-        return new ResponseEntity<>(pythonInterpreterService.interpretPythonCode(codeDto, request), HttpStatus.OK);
+        ResultDto resultDto = pythonInterpreterService.interpretPythonCode(codeDto, request);
+        return ResponseEntity.ok(resultDto);
     }
 }

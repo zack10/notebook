@@ -50,7 +50,7 @@ public class PythonInterpreterService implements IPythonInterpreterService {
 
                 if (code.contains(KeyWordEnum.PRINT.getKeyWord())) {
                     interpreter.exec(code);
-                    resultDto.setResult(out.toString());
+                    resultDto.setResult(out.toString().replaceAll("\n", ""));
                 }else {
                     String[] codeInstr = code.replaceAll("\\s+","").split("=");
                     String variableName = codeInstr[0];
