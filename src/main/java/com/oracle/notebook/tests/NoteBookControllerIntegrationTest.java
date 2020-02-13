@@ -31,27 +31,45 @@ public class NoteBookControllerIntegrationTest {
 
     HttpHeaders headers = new HttpHeaders();
 
-    @Test
-    public void testExecutePythonCode() throws Exception {
+    private final String uri = "/oracle/notebook/execute";
 
-        String uri = "/oracle/notebook/execute";
-        String code = "%python print 'hello'";
+    private ResultDto sendRequestToServer(String code) {
         CodeDto codeDto = new CodeDto(code);
-
-        ResultDto expectedResult = new ResultDto("hello");
-        String expected = objectMapper.writeValueAsString(expectedResult);
 
         HttpEntity<CodeDto> dto = new HttpEntity<>(codeDto, headers);
         ResponseEntity<ResultDto> response = restTemplate.exchange(
-                createURLWithPort(uri),
+                createURLWithPort(),
                 HttpMethod.POST, dto, ResultDto.class);
 
-        ResultDto actual = response.getBody() != null ? response.getBody() : new ResultDto();
+        return response.getBody() != null ? response.getBody() : new ResultDto();
+    }
+
+    @Test
+    public void testPrintString() throws Exception {
+        String code = "%python print 'hello'";
+        ResultDto expectedResult = new ResultDto("hello");
+
+        String expected = objectMapper.writeValueAsString(expectedResult);
+        ResultDto actual = sendRequestToServer(code);
 
         JSONAssert.assertEquals(expected, objectMapper.writeValueAsString(actual), true);
     }
 
-    private String createURLWithPort(String uri) {
+    @Test
+    public void assignVariableThenPrintIt() throws Exception {
+        String code = "%python a=5";
+        ResultDto expectedResult = new ResultDto("10");
+
+        String expected = objectMapper.writeValueAsString(expectedResult);
+        ResultDto result = sendRequestToServer(code);
+
+        String code2 = "%python print ";
+        ResultDto actual2 = sendRequestToServer(code2+result.getResult()+"*2");
+
+        JSONAssert.assertEquals(expected, objectMapper.writeValueAsString(actual2), true);
+    }
+
+    private String createURLWithPort() {
         return "http://localhost:" + port + uri;
     }
 }
