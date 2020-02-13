@@ -48,7 +48,7 @@ public class NoteBookControllerIntegrationTest {
 
         ResultDto actual = response.getBody() != null ? response.getBody() : new ResultDto();
 
-        JSONAssert.assertEquals(expected, objectMapper.writeValueAsString(actual), true);;
+        JSONAssert.assertEquals(expected, objectMapper.writeValueAsString(actual), true);
     }
 
     private String createURLWithPort(String uri) {
