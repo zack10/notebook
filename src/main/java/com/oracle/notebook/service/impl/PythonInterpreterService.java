@@ -53,6 +53,7 @@ public class PythonInterpreterService implements IPythonInterpreterService {
                     interpreter.exec(code);
                     resultDto.setResult(out.toString().replaceAll("\n", ""));
                 } else {
+                    interpreter.exec(code);
                     String[] codeInstr = code.replaceAll("\\s+","").split("=");
                     String variableName = codeInstr[0];
                     String value = codeInstr[1];
@@ -64,7 +65,7 @@ public class PythonInterpreterService implements IPythonInterpreterService {
             } catch (ArrayIndexOutOfBoundsException ex) {
                 throw new PythonSyntaxException("Syntax incorrect !");
             } catch (PyException ex) {
-                throw new UnexpectedPythonInterpreterException("Unexpected python interpreter exception occurred");
+                throw new UnexpectedPythonInterpreterException(ex.toString());
             }
         }else {
             throw new UnknownInterpreterException("Invalid python interpreter");
