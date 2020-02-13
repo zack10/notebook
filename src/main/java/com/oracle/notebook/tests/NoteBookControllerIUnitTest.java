@@ -29,6 +29,7 @@ public class NoteBookControllerIUnitTest extends AbstractTest{
 
 
     @Before
+    @Override
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
     }
