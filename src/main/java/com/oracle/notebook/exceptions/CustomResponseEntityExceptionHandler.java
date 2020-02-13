@@ -28,4 +28,10 @@ public class CustomResponseEntityExceptionHandler extends ResponseEntityExceptio
         ExceptionMessageDto exceptionResponse = new ExceptionMessageDto(ex.getMessage());
         return new ResponseEntity<>(exceptionResponse, HttpStatus.BAD_REQUEST);
     }
+
+    @ExceptionHandler(UnexpectedPythonInterpreterException.class)
+    public  final ResponseEntity<Object> handleUnexpectedPythonInterpreterException(UnexpectedPythonInterpreterException ex, WebRequest req) {
+        ExceptionMessageDto exceptionResponse = new ExceptionMessageDto(ex.getMessage());
+        return new ResponseEntity<>(exceptionResponse, HttpStatus.BAD_REQUEST);
+    }
 }

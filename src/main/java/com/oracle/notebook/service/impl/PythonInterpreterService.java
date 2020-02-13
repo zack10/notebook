@@ -7,10 +7,12 @@ import com.oracle.notebook.enums.ConstantsEnum;
 import com.oracle.notebook.enums.InterpretersEnum;
 import com.oracle.notebook.enums.KeyWordEnum;
 import com.oracle.notebook.exceptions.PythonSyntaxException;
+import com.oracle.notebook.exceptions.UnexpectedPythonInterpreterException;
 import com.oracle.notebook.exceptions.UnknownInterpreterException;
 import com.oracle.notebook.service.IPythonInterpreterService;
 import org.python.core.PyException;
 import org.python.core.PyInteger;
+import org.python.core.PySyntaxError;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -57,10 +59,12 @@ public class PythonInterpreterService implements IPythonInterpreterService {
                     interpreter.set(variableName, new PyInteger(Integer.parseInt(value)));
                     resultDto.setResult(value);
                 }
-            } catch (PyException ex) {
+            } catch (PySyntaxError ex) {
                 throw new PythonSyntaxException(ex.toString());
             } catch (ArrayIndexOutOfBoundsException ex) {
                 throw new PythonSyntaxException("Syntax incorrect !");
+            } catch (PyException ex) {
+                throw new UnexpectedPythonInterpreterException("Unexpected python interpreter exception occurred");
             }
         }else {
             throw new UnknownInterpreterException("Invalid python interpreter");
