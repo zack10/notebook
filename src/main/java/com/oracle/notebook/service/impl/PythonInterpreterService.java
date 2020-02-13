@@ -67,7 +67,7 @@ public class PythonInterpreterService implements IPythonInterpreterService {
             } catch (PyException ex) {
                 throw new UnexpectedPythonInterpreterException(ex.toString());
             }
-        }else {
+        } else {
             throw new UnknownInterpreterException("Invalid python interpreter");
         }
 
