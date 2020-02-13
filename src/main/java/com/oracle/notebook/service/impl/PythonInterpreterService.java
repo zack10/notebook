@@ -27,11 +27,10 @@ public class PythonInterpreterService implements IPythonInterpreterService {
     public ResultDto interpretPythonCode(CodeDto codeDto, HttpServletRequest request) {
 
         ResultDto resultDto = new ResultDto();
-        StringBuilder stringBuilder = new StringBuilder(codeDto.getCode());
         String interpreterName = codeDto.getCode().split(" ")[0];
-        String code = stringBuilder.substring(8);
-
+        String code = codeDto.getCode().substring(8);
         PyInterpreter interpreter = (PyInterpreter) request.getSession().getAttribute(ConstantsEnum.SESSIONID.name());
+
         if (interpreter == null) {
             interpreter = new PyInterpreter();
             /*
@@ -51,7 +50,7 @@ public class PythonInterpreterService implements IPythonInterpreterService {
                 if (code.contains(KeyWordEnum.PRINT.getKeyWord())) {
                     interpreter.exec(code);
                     resultDto.setResult(out.toString().replaceAll("\n", ""));
-                }else {
+                } else {
                     String[] codeInstr = code.replaceAll("\\s+","").split("=");
                     String variableName = codeInstr[0];
                     String value = codeInstr[1];
@@ -64,7 +63,7 @@ public class PythonInterpreterService implements IPythonInterpreterService {
                 throw new PythonSyntaxException("Syntax incorrect !");
             }
         }else {
-            throw new UnknownInterpreterException("this isn't python code");
+            throw new UnknownInterpreterException("Invalid python interpreter");
         }
 
         return resultDto;
