@@ -5,9 +5,15 @@ import com.oracle.notebook.controller.dto.ResultDto;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * @author zack
+ */
+
 public interface IPythonInterpreterService {
+
     /**
      *  interpret python code
+     *
      * @param codeDto
      * @param request
      * @return

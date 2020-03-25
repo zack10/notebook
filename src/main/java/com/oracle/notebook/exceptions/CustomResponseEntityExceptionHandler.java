@@ -29,8 +29,8 @@ public class CustomResponseEntityExceptionHandler extends ResponseEntityExceptio
         return new ResponseEntity<>(exceptionResponse, HttpStatus.BAD_REQUEST);
     }
 
-    @ExceptionHandler(UnexpectedPythonInterpreterException.class)
-    public  final ResponseEntity<Object> handleUnexpectedPythonInterpreterException(UnexpectedPythonInterpreterException ex, WebRequest req) {
+    @ExceptionHandler(UnexpectedPyInterpreterException.class)
+    public final ResponseEntity<Object> handleUnexpectedPyInterpreterException(UnexpectedPyInterpreterException ex, WebRequest req) {
         ExceptionMessageDto exceptionResponse = new ExceptionMessageDto(ex.getMessage());
         return new ResponseEntity<>(exceptionResponse, HttpStatus.BAD_REQUEST);
     }

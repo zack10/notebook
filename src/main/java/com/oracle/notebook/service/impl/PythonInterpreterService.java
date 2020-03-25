@@ -7,7 +7,7 @@ import com.oracle.notebook.enums.ConstantsEnum;
 import com.oracle.notebook.enums.InterpretersEnum;
 import com.oracle.notebook.enums.KeyWordEnum;
 import com.oracle.notebook.exceptions.PythonSyntaxException;
-import com.oracle.notebook.exceptions.UnexpectedPythonInterpreterException;
+import com.oracle.notebook.exceptions.UnexpectedPyInterpreterException;
 import com.oracle.notebook.exceptions.UnknownInterpreterException;
 import com.oracle.notebook.service.IPythonInterpreterService;
 import org.python.core.PyException;
@@ -20,11 +20,23 @@ import org.springframework.stereotype.Service;
 import javax.servlet.http.HttpServletRequest;
 import java.io.StringWriter;
 
+/**
+ * @author zack
+ *
+ */
+
 @Service
 public class PythonInterpreterService implements IPythonInterpreterService {
 
     private static Logger logger = LoggerFactory.getLogger(PythonInterpreterService.class);
 
+    /**
+     * interpret python code
+     *
+     * @param codeDto
+     * @param request
+     * @return
+     */
     @Override
     public ResultDto interpretPythonCode(CodeDto codeDto, HttpServletRequest request) {
 
@@ -65,7 +77,7 @@ public class PythonInterpreterService implements IPythonInterpreterService {
             } catch (ArrayIndexOutOfBoundsException ex) {
                 throw new PythonSyntaxException("Syntax incorrect !");
             } catch (PyException ex) {
-                throw new UnexpectedPythonInterpreterException(ex.toString());
+                throw new UnexpectedPyInterpreterException(ex.toString());
             }
         } else {
             throw new UnknownInterpreterException("Invalid python interpreter");

@@ -31,8 +31,6 @@ public class NoteBookControllerIntegrationTest {
 
     HttpHeaders headers = new HttpHeaders();
 
-    private final String uri = "/oracle/notebook/execute";
-
     private ResultDto sendRequestToServer(String code) {
         CodeDto codeDto = new CodeDto(code);
 
@@ -70,6 +68,7 @@ public class NoteBookControllerIntegrationTest {
     }
 
     private String createURLWithPort() {
+        String uri = "/oracle/notebook/execute";
         return "http://localhost:" + port + uri;
     }
 }

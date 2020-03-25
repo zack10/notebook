@@ -4,6 +4,11 @@ import org.python.util.PythonInterpreter;
 
 import java.io.Serializable;
 
+/**
+ * @author zack
+ *
+ */
+
 public class PyInterpreter extends PythonInterpreter implements Serializable {
 
     private static final long serialVersionUID = 1L;

@@ -1,5 +1,10 @@
 package com.oracle.notebook.enums;
 
+/**
+ * @author zack
+ *
+ */
+
 public enum KeyWordEnum {
 
     PRINT("print");
