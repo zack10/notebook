@@ -30,13 +30,6 @@ public class PythonInterpreterService implements IPythonInterpreterService {
 
     private static Logger logger = LoggerFactory.getLogger(PythonInterpreterService.class);
 
-    /**
-     * interpret python code
-     *
-     * @param codeDto
-     * @param request
-     * @return
-     */
     @Override
     public ResultDto interpretPythonCode(CodeDto codeDto, HttpServletRequest request) {
 
@@ -48,9 +41,9 @@ public class PythonInterpreterService implements IPythonInterpreterService {
         if (interpreter == null) {
             interpreter = new PyInterpreter();
             /*
-            * if interpreter object is not present in session,
-            * set interpreter in the request
-            */
+             * if interpreter object is not present in session, set interpreter in the
+             * request
+             */
             request.getSession().setAttribute(ConstantsEnum.SESSIONID.name(), interpreter);
         }
         request.getSession().setAttribute(ConstantsEnum.SESSIONID.name(), interpreter);
@@ -66,7 +59,7 @@ public class PythonInterpreterService implements IPythonInterpreterService {
                     resultDto.setResult(out.toString().replaceAll("\n", ""));
                 } else {
                     interpreter.exec(code);
-                    String[] codeInstr = code.replaceAll("\\s+","").split("=");
+                    String[] codeInstr = code.replaceAll("\\s+", "").split("=");
                     String variableName = codeInstr[0];
                     String value = codeInstr[1];
                     interpreter.set(variableName, new PyInteger(Integer.parseInt(value)));
